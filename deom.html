@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>deom</title>
+
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class="panel panel-default center-block" style="margin: 30px auto;width: 60%;">
+				<div class="panel-body">
+					<form role="form" action="deom.html" id="formid">
+						<div class="form-group">
+							<label for="exampleInputEmail1">电子邮箱</label>
+							<input type="text" name="email" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputFile">文件上传</label>
+							<input type="file" name="file">
+
+						</div>
+						<div class="checkbox">
+							<label>
+      <input type="checkbox" name="checkbox" > 同意本协议
+      
+    </label>
+						</div>
+						<button type="submit" class="btn btn-primary btn-block">提交表单</button>
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="from.censor.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			yz('formid', [{
+				name: 'email',
+				limit: 'required',
+				alerttxt: '电子邮箱为必填'
+			}, {
+				name: 'checkbox',
+				limit: 'required',
+				alerttxt: '请同意本协议'
+			}])
+		</script>
+
+	</body>
+
+</html>
